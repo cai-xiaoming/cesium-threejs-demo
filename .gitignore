@@ -7,3 +7,9 @@ npm-debug.log
 
 # NPM-sourced third-party client libraries
 /public/ThirdParty
+
+# bak File
+*.bak
+
+# other
+package-lock.json

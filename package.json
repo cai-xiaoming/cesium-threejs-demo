@@ -6,7 +6,7 @@
   "author": "AGI",
   "devDependencies": {
     "bluebird": "3.4.7",
-    "cesium": "^1.45.0",
+    "cesium": "^1.88.0",
     "chroma-js": "1.0.1",
     "fs-extra": "2.0.0",
     "gulp": "3.9.1",
@@ -21,7 +21,7 @@
     "requirejs": "2.3.2",
     "requirejs-text": "2.0.15",
     "restify": "4.3.0",
-    "three": "0.87.1",
+    "three": "^0.135.0",
     "yargs": "6.6.0"
   },
   "scripts": {

@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Use correct character set. -->
-  <meta charset="utf-8">
-  <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <title>CesiumJS+ThreeJS</title>
-  <link href="CesiumThree.css" rel="stylesheet" type="text/css" media="all">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	<title>Cesium integrate Threejs</title>
+	<!--cesium样式-->
+	<link rel="stylesheet" href="./ThirdParty/Cesium/Widgets/widgets.css">
+	<!--cesium-->
+	<script src="./ThirdParty/Cesium/Cesium.js"></script>
+	<!--three-->
+	<script src="./ThirdParty/Three/three.min.js"></script>
+    <style>
+		/*设置cesium和three的画布位置*/
+        .container-integrate canvas {
+            position: absolute;
+            top: 0;
+        }
+		/*three画布禁止鼠标操作*/
+        .container-integrate canvas:nth-child(3) {
+            pointer-events: none;
+
+        }
+    </style>
 </head>
-<body>
-  <div id="cesiumContainer"></div>
-  <div id="ThreeContainer"></div>
-  <div id="cover">
-    <div id="loadingIndicator" class="loadingIndicator"></div>
-  </div>
+
+<body onload="pageload()">
+
+<div class="container-integrate" style="">
+	<!--cesium容器-->
+    <div id="cesiumContainer" style="height: 800px;width: 100%;"></div>
+</div>
+
 </body>
 <script data-main="main" src="ThirdParty/require.js"></script>
+<script src="./CesiumThree.js"></script>
 </html>
